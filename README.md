@@ -30,6 +30,11 @@ Using blockchain technology (later integrated with IoT):
 - architecture
 
 - algorithm
+  - PoA(Proof of Authority) -> `Chosen`
+    - A pre-approved set of authorities using their identity and staking their reputation to process txs
+    - higly tolerant to 51% attack
+    - simplify validation process and reduce power consumption
+    - suitable for supply chain use case
 
 - codebase
   - scaffold(Program loop) -> simple ->`WIP`
