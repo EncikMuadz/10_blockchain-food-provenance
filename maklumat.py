@@ -9,6 +9,10 @@ class Maklumat:
         self.organisasi_penambah = organisasi_penambah
         self.organisasi_penerima = organisasi_penerima
         self.perkembangan = perkembangan
+
+    # paparkan maklumat daripada dictionary ke dalam bentuk string menggunakan __repr__
+    def __repr__(self):
+        return 'Organisasi Pengemaskini: {}, Organisasi Menerima: {}, Perkembangan: {}'.format(self.organisasi_penambah, self.organisasi_penerima, self.perkembangan)
         
     # mengarang maklumat baru untuk ditambah ke maklumat-maklumat semasa
     def penambah_maklumat(self):

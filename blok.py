@@ -15,7 +15,11 @@ class Blok:
         self.maklumat_maklumat = maklumat_maklumat
         self.pembuktian = pembuktian
         self.cetakan_masa = cetakan_masa
-    
+
+    # # paparkan maklumat daripada dictionary ke dalam bentuk string menggunakan __repr__
+    # def __repr__(self):
+    #     return 'Indeks: {}, Cincangan Lepas: {}, Maklumat-maklumat: {}, Pembuktian: {}, Cetakan Masa: {}'.format(self.indeks, self.cincangan_sebelumnya, self.maklumat_maklumat, self.pembuktian, self.cetakan_masa)
+        
     # metode untuk menambah blok
     def penambah_blok(self):
         
