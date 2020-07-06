@@ -1,20 +1,20 @@
-from collections import OrderedDict
-from maklumat import Maklumat
-
 """ blok kelas
     tambah blok baharu
     mengsahihkan blok
     mendapatkan informasi blok terkini
 """
+from collections import OrderedDict
+from time import time
+from maklumat import Maklumat
 
 class Blok:
     # attributes
-    def __init__(self, indeks, cincangan_sebelumnya, cetakan_masa, maklumat_maklumat, pembuktian):
+    def __init__(self, indeks, cincangan_sebelumnya, maklumat_maklumat, pembuktian, cetakan_masa):
         self.indeks = indeks
         self.cincangan_sebelumnya = cincangan_sebelumnya
         self.maklumat_maklumat = maklumat_maklumat
-        self.cetakan_masa = cetakan_masa
         self.pembuktian = pembuktian
+        self.cetakan_masa = cetakan_masa
     
     # metode untuk menambah blok
     def penambah_blok(self):
