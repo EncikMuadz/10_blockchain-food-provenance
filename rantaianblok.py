@@ -8,14 +8,9 @@ class RantaianBlok:
     # attributes
     def __init__(self):
         self.rantaian = []
-        self.data_data_semasa = []
 
     # metode untuk menambah blok
     def penambah_blok(self):
-        pass
-
-    # mengarang data baru untuk ditambah ke data-data semasa
-    def pengarang_data(self):
         pass
 
     # mencincang blok data ke dalam bentuk cryptic
