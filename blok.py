@@ -6,6 +6,7 @@
 from collections import OrderedDict
 from time import time
 from maklumat import Maklumat
+from hashlib import sha256
 
 class Blok:
     # attributes
@@ -14,12 +15,17 @@ class Blok:
         self.cincangan_sebelumnya = cincangan_sebelumnya
         self.maklumat_maklumat = maklumat_maklumat
         self.pembuktian = pembuktian
-        self.cetakan_masa = cetakan_masa
+        self.cetakan_masa = time()
 
     # # paparkan maklumat daripada dictionary ke dalam bentuk string menggunakan __repr__
     # def __repr__(self):
     #     return 'Indeks: {}, Cincangan Lepas: {}, Maklumat-maklumat: {}, Pembuktian: {}, Cetakan Masa: {}'.format(self.indeks, self.cincangan_sebelumnya, self.maklumat_maklumat, self.pembuktian, self.cetakan_masa)
         
+    # dapatkan cincangan blok terkini
+    def pencincang_blok(self):
+        jalinan_blok = '{}{}{}{}{}'.format(self.indeks, self.cincangan_sebelumnya, self.maklumat_maklumat, self.pembuktian, self.cetakan_masa)
+        return sha256(jalinan_blok.encode()).hexdigest()
+
     # metode untuk menambah blok
     def penambah_blok(self):
         
@@ -37,7 +43,7 @@ class Blok:
 
     # penciptaan blok genesis
     def pemula_blok_genesis(self):
-        self.penambah_blok
+        self.penambah_blok()
 
     # memanggil/memapar blok terkini
     def pemanggil_blok_terkini(self):
