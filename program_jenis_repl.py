@@ -1,6 +1,7 @@
-program_masih_berjalan = True
+#program_masih_berjalan = True
 
-while program_masih_berjalan:
+#while program_masih_berjalan:
+while True:
     pilihan = input(
         '\nInteraksi dengan program paparan CLI\n\tTekan \'1\': Tambah Maklumat\n\tTekan \'2\': Tambah blok maklumat\n\tTekan \'q\': Keluar dari program'
     )
