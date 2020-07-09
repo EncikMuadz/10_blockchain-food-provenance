@@ -2,4 +2,7 @@
     TBD - Kelas objek organisasi untuk menambah organisasi
 """
 class Organisasi:
-    pass
+    def __init__(self, orgId, nodeId, role):
+        self.orgId = orgId
+        self.nodeId = nodeId
+        self.role = role
