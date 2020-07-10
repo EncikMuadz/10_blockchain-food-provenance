@@ -19,6 +19,7 @@ class RantaianBlok:
         perkembangan = input()
         maklumat_baru = Maklumat(id_organisasi, id_penerima, perkembangan) # instantiate objek kelas maklumat
         self.maklumat_maklumat_semasa.append(maklumat_baru.penambah_maklumat()) # gabung ke list maklumat-maklumat semasa
+        return self.maklumat_maklumat_semasa
 
     # menambah blok baharu
     def menambah_blok(self):
