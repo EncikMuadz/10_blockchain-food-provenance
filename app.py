@@ -1,9 +1,9 @@
-from flask import Flask
+from flask import Flask, render_template # render_template to render html from templates dir
 app = Flask(__name__)
 
 @app.route('/')
 def main_page():
-    return 'Dashboard for food provenance supply chain app'
+    return render_template('rumah.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
