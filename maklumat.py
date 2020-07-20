@@ -12,7 +12,7 @@ class Maklumat:
 
     # paparkan maklumat daripada dictionary ke dalam bentuk string menggunakan __repr__
     def __repr__(self):
-        return 'Organisasi Pengemaskini: {}, Organisasi Menerima: {}, Perkembangan: {}'.format(self.organisasi_penambah, self.organisasi_penerima, self.perkembangan)
+        return f'Organisasi Pengemaskini: {self.organisasi_penambah}, Organisasi Menerima: {self.organisasi_penerima}, Perkembangan: {self.perkembangan}'
         
     # mengarang maklumat baru untuk ditambah ke maklumat-maklumat semasa
     def penambah_maklumat(self):
