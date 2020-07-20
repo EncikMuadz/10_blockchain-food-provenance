@@ -16,11 +16,9 @@ class Maklumat:
         
     # mengarang maklumat baru untuk ditambah ke maklumat-maklumat semasa
     def penambah_maklumat(self):
-        maklumat = OrderedDict(
-            [
-                ('organisasi_penambah', self.organisasi_penambah),
-                ('organisasi_penerima', self.organisasi_penerima),
-                ('perkembangan', self.perkembangan)
-            ]
+        maklumat = Maklumat(
+            organisasi_penambah = self.organisasi_penambah,
+            organisasi_penerima = self.organisasi_penerima,
+            perkembangan = self.perkembangan
         )
         return maklumat
