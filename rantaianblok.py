@@ -33,11 +33,13 @@ class RantaianBlok(Blok):
             cincangan_sebelumnya = cincangan_sebelumnya,
             maklumat_maklumat = self.maklumat_maklumat_semasa,
             cetakan_masa = self.cetakan_masa,
-            pembuktian = self.pembuktian
+            pembuktian = pembuktian
         )
+
+        self.maklumat_maklumat_semasa = [] # tetapkan kembali ke list tanpa elemen-elemen
+        self.rantaian.append(blok) # append blok baru ke rantaian
         return blok
 
-    
     # penciptaan blok genesis
     def pemula_blok_genesis(self):
         self.penambah_blok(pembuktian=0, cincangan_sebelumnya=0)
