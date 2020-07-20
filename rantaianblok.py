@@ -11,16 +11,13 @@ from time import time
 class RantaianBlok(Blok):
     # attributes
     def __init__(self):
-        super(RantaianBlok, self).__init__() # pewarisan attribute daripada kelas Blok
+        # super(RantaianBlok, self).__init__() # pewarisan attribute daripada kelas Blok
         self.rantaian = [] # mengandungi rantaian blok ditambah
         self.maklumat_maklumat_semasa = [] # maklumat-maklumat terkini untuk ditambah ke blok
 
     # menambah maklumat baharu
-    def penambah_maklumat(self):
-        id_organisasi = int(input())
-        id_penerima = int(input())
-        perkembangan = input()
-        maklumat_baru = Maklumat(id_organisasi, id_penerima, perkembangan) # instantiate objek kelas maklumat
+    def penambah_maklumat(self, organisasi_penambah, organisasi_penerima, perkembangan):
+        maklumat_baru = Maklumat(organisasi_penambah, organisasi_penerima, perkembangan) # instantiate objek kelas maklumat
         self.maklumat_maklumat_semasa.append(maklumat_baru.penambah_maklumat()) # gabung ke list maklumat-maklumat semasa
         return self.maklumat_maklumat_semasa
 
