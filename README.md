@@ -40,4 +40,5 @@ Using blockchain technology (later integrated with IoT):
   - scaffold(Program loop) -> simple ->`WIP`
 
 - recipe
-  - test
+  - activate environment -> anaconda or virtualenv
+  - run `driver.py`
