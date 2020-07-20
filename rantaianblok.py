@@ -11,7 +11,7 @@ from time import time
 class RantaianBlok(Blok):
     # attributes
     def __init__(self):
-        super(RantaianBlok, self).__init__()
+        super(RantaianBlok, self).__init__() # pewarisan attribute daripada kelas Blok
         self.rantaian = [] # mengandungi rantaian blok ditambah
         self.maklumat_maklumat_semasa = [] # maklumat-maklumat terkini untuk ditambah ke blok
 
@@ -25,24 +25,22 @@ class RantaianBlok(Blok):
         return self.maklumat_maklumat_semasa
 
     # metode untuk menambah blok
-    def penambah_blok(self):
+    def penambah_blok(self, pembuktian, cincangan_sebelumnya):
         
         # gunapakai ordered list untuk karang blok baru
-        blok = OrderedDict(
-            [
-                ('indeks', self.indeks),
-                ('cincangan_sebelumnya', self.cincangan_sebelumnya),
-                ('maklumat_maklumat', self.maklumat_maklumat),
-                ('cetakan_masa', self.cetakan_masa),
-                ('pembuktian', self.pembuktian)
-            ]
+        blok = Blok(
+            indeks = len(self.rantaian),
+            cincangan_sebelumnya = cincangan_sebelumnya,
+            maklumat_maklumat = self.maklumat_maklumat_semasa,
+            cetakan_masa = self.cetakan_masa,
+            pembuktian = self.pembuktian
         )
         return blok
 
     
     # penciptaan blok genesis
     def pemula_blok_genesis(self):
-        self.penambah_blok()
+        self.penambah_blok(pembuktian=0, cincangan_sebelumnya=0)
 
     # mendaftar organisasi yang berkepentingan
     def pendaftar_organisasi(self):
