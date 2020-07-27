@@ -40,6 +40,9 @@ class Nodus(threading.Thread):
         soket_hubung = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         soket_hubung.connect((perumah, port))
 
+        soket_hubung.send(self.id.encode('utf-8'))
+        jalinan_id_diterima = soket_hubung.recv(4096).decode('utf-8')
+
 # driver
 nodus1 = Nodus('127.0.0.1', 8001)
 nodus2 = Nodus('127.0.0.1', 8002)
