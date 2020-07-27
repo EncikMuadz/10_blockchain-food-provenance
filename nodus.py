@@ -15,6 +15,7 @@ class Nodus(threading.Thread):
         self.port = port
         self.id = str(uuid4().hex)
         self.soket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.penamat_flag = threading.Event
         self.pemula()
         print(f'Bebenang kelas nodus dimulai pada, perumah: {self.perumah} dan port: {self.port}\n')
 
@@ -27,14 +28,23 @@ class Nodus(threading.Thread):
         print('Memulai bebenang\n')
         self.start()
         print('Sertakan/Join bebenang dengan bebenang utama\n')
-        self.join()
+        self.soket.listen(2)
+        self.jalan()
 
     def jalan(self):
-        pass
+        # jalinan perhubungan dengan peer lain
+        while not self.penamat_flag.isSet:
+            hubungan, alamat = self.soket.accept()
+            print(f'Menerima perhubungan daripada {alamat}')
+    def hubung(self, perumah, port):
+        soket_hubung = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        soket_hubung.connect((perumah, port))
 
 # driver
 nodus1 = Nodus('127.0.0.1', 8001)
 nodus2 = Nodus('127.0.0.1', 8002)
 time.sleep(2)
+nodus1.hubung('127.0.0.1', 8002)
+nodus2.hubung('127.0.0.1', 8001)
 for nodus in [nodus1, nodus2]:
     print(f'Status {nodus} Alive?: {nodus.is_alive()}')
