@@ -27,15 +27,17 @@ class Nodus(threading.Thread):
         self.soket.listen(1)
         print('Memulai bebenang\n')
         self.start()
-        print('Sertakan/Join bebenang dengan bebenang utama\n')
         self.soket.listen(2)
-        self.jalan()
 
-    def jalan(self):
+    def run(self):
         # jalinan perhubungan dengan peer lain
         while not self.penamat_flag.isSet:
+            print('Menunggu jalinan perhubungan')
             hubungan, alamat = self.soket.accept()
             print(f'Menerima perhubungan daripada {alamat}')
+            # pertukaran id antara nodus secara ringkas
+            id_nodus_dihubung = hubungan.recv(4096).decode('utf-8') # terima id daripada nodus dihubung
+            hubungan.send(self.id.encode('utf-8')) # hantar id kendiri kepada nodus dihubung
     def hubung(self, perumah, port):
         soket_hubung = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         soket_hubung.connect((perumah, port))
