@@ -38,6 +38,9 @@ class Nodus(threading.Thread):
             # pertukaran id antara nodus secara ringkas
             id_nodus_dihubung = hubungan.recv(4096).decode('utf-8') # terima id daripada nodus dihubung
             hubungan.send(self.id.encode('utf-8')) # hantar id kendiri kepada nodus dihubung
+
+            # seterusnya adalah instantiate threads, dan memulakan bebenang hubungan
+            
     def hubung(self, perumah, port):
         soket_hubung = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         soket_hubung.connect((perumah, port))
