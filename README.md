@@ -37,7 +37,8 @@ Using blockchain technology (later integrated with IoT):
     - suitable for supply chain use case
 
 - codebase
-  - scaffold(Program loop) -> simple ->`WIP`
+  - scaffold(Program loop) -> simple -> `WIP`
+  - p2p network -> threads, sockets -> `WIP`
 
 - recipe
   - activate environment -> anaconda or virtualenv
