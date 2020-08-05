@@ -31,7 +31,7 @@ class Nodus(threading.Thread):
 
     def run(self):
         # jalinan perhubungan dengan peer lain
-        while not self.penamat_flag.isSet:
+        while not self.penamat_flag.is_set():
             print('Menunggu jalinan perhubungan')
             hubungan, alamat = self.soket.accept()
             print(f'Menerima perhubungan daripada {alamat}')
@@ -47,6 +47,7 @@ class Nodus(threading.Thread):
 
         soket_hubung.send(self.id.encode('utf-8'))
         jalinan_id_diterima = soket_hubung.recv(4096).decode('utf-8')
+        
 
 # driver
 nodus1 = Nodus('127.0.0.1', 8001)
