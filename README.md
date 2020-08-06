@@ -17,7 +17,7 @@ Using blockchain technology (later integrated with IoT):
 ### Progress
 - `Use Case` -> `WIP`
 - Choosing tech stack -> `WIP`
-  - Language -> `Python`(preferably), `C++`(2nd choice), `Erlang`(3rd Choice)
+  - Language -> `Python`(preferably), `C++`(2nd choice), `Erlang`(3rd Choice), `Golang` (4th Choice)
   - Web -> `Flask`(preferably), `WASM`(2nd choice)
   - IoT -> `None` for initial stage, add later
     - MQTT (Message broker) ->`USING`
