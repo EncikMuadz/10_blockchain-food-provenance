@@ -9,10 +9,10 @@ from hashlib import sha256
 
 class Blok:
     # attributes
-    def __init__(self, indeks, cincangan_sebelumnya, maklumat_maklumat, pembuktian, cetakan_masa):
+    def __init__(self, indeks, cincangan_sebelumnya, pembuktian, cetakan_masa):
         self.indeks = indeks
         self.cincangan_sebelumnya = cincangan_sebelumnya
-        self.maklumat_maklumat = maklumat_maklumat
+        self.maklumat_maklumat = []
         self.pembuktian = pembuktian
         self.cetakan_masa = time()
 

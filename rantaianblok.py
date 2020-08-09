@@ -28,7 +28,6 @@ class RantaianBlok(Blok):
         blok = Blok(
             indeks = len(self.rantaian),
             cincangan_sebelumnya = cincangan_sebelumnya,
-            maklumat_maklumat = self.maklumat_maklumat_semasa,
             cetakan_masa = self.cetakan_masa,
             pembuktian = pembuktian
         )

@@ -3,7 +3,7 @@ from collections import OrderedDict # gunapakai ordered dict(doubly linked list)
 """ Kelas objek Maklumat/Transaksi
     organisasi bertanggungjawab akan mengemaskini perkembangan pada bahagian memasing
 """
-class Maklumat:
+class Maklumat(dict):
     # attributes
     def __init__(self, organisasi_penambah, organisasi_penerima, perkembangan):
         self.organisasi_penambah = organisasi_penambah
