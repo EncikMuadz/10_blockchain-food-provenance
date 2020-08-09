@@ -42,12 +42,18 @@ class RantaianBlok(Blok):
 
     # mendaftar organisasi yang berkepentingan
     def pendaftar_organisasi(self):
+        ''' daftar organisasi peserta-peserta untuk sesi ini 
+            nama_organisasi
+            tanggungjawab
+        '''
         pass
 
     # mengsahihkan rantaian blok
     def pengsahih_rantaian(self):
+        ''' menyahihkan integriti data '''
         pass
 
     # membuktikan kebenaran maklumat ditambah
     def pembukti(self):
+        ''' pembuktian maklumat ditambah '''
         pass
