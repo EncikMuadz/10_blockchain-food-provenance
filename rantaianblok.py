@@ -14,6 +14,7 @@ class RantaianBlok(Blok):
         # super(RantaianBlok, self).__init__() # pewarisan attribute daripada kelas Blok
         self.rantaian = [] # mengandungi rantaian blok ditambah
         self.maklumat_maklumat_semasa = [] # maklumat-maklumat terkini untuk ditambah ke blok
+        self.cincangan_sebelumnya = None
 
     # menambah maklumat baharu
     def penambah_maklumat(self, organisasi_penambah, organisasi_penerima, perkembangan):
