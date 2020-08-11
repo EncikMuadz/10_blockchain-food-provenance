@@ -24,5 +24,3 @@ ayat_dicincang2 = str(sha256(ayat_kedua.encode('UTF-8')).hexdigest())
 kedua = (ayat_kedua, ayat_dicincang2)
 ujian2 = Blok(data = kedua)
 ujian.penerus(ayat_dicincang)
-
-print(ujian.penerus)
