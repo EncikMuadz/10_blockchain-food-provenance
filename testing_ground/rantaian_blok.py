@@ -2,9 +2,9 @@ from hashlib import sha256
 
 class Blok:
     ''' mewakili kelas nodus didalam LinkedList'''
-    def __init__(self, data):
+    def __init__(self, data, penerus = None):
         self.data = data
-        self.penerus = None # atau next element
+        self.penerus = penerus # atau next element
 
 # class Rantaian:
 #     ''' mewakili kelas LinkedList'''
@@ -13,9 +13,16 @@ class Blok:
 #     def attr_kep(self):
 #         return self.kepala
 
-mesej_awalan = 'Bacalah!!! dengan nama Tuhan mu..'
-mesej_dicincang = str(sha256(mesej_awalan.encode('UTF-8')).hexdigest())
-awalan = (mesej_awalan, mesej_dicincang)
-
+ayat_awalan = 'Bacalah!!! dengan nama Tuhan mu..'
+ayat_dicincang = str(sha256(ayat_awalan.encode('UTF-8')).hexdigest())
+awalan = (ayat_awalan, ayat_dicincang)
 ujian = Blok(data = awalan)
 print(ujian.data)
+
+ayat_kedua = 'yang menciptakan..'
+ayat_dicincang2 = str(sha256(ayat_kedua.encode('UTF-8')).hexdigest())
+kedua = (ayat_kedua, ayat_dicincang2)
+ujian2 = Blok(data = kedua)
+ujian.penerus(ayat_dicincang)
+
+print(ujian.penerus)
