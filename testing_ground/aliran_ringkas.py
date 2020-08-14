@@ -3,18 +3,22 @@
 # kontainer untuk rantaian blok sesi ini
 rantaian_data = []
 
-def pemasuk_data(pengirim, penerima, mesej):
+def pemasuk_data():
     pengirim, penerima = input('\nMasukkan pengirim penerima dalam format berikut: Pengirim Penerima\n').split()
     mesej = input('\nTulis mesej anda:\n')
-    return pengirim, penerima, mesej
+    rantaian_data.append((pengirim, penerima, mesej))
 
 def antara_muka():
-    while True:
+    program_berjalan = True
+    while program_berjalan:
         pilihan_pengguna = input()
         if pilihan_pengguna == 'm':
             pemasuk_data()
+        elif pilihan_pengguna == 'p':
+            for elem in rantaian_data:
+                print(elem)
         elif pilihan_pengguna == 'q':
-            return False
+            program_berjalan = False
         else:
             print('\nPilihan tidak sah!!!\n')
 
