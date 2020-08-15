@@ -1,9 +1,10 @@
 ''' Implementasi program repl rantaian blok tanpa kelas'''
 
 from hashlib import sha256
+from collections import deque # untuk blockchain
 
 # kontainer untuk rantaian blok sesi ini
-rantaian_data = []
+rantaian_data = deque()
 data_data = []
 
 def pemasuk_data():
@@ -29,7 +30,7 @@ def pengosong_kontainer(data_data):
 def antara_muka():
     program_berjalan = True
     while program_berjalan:
-        pilihan_pengguna = input()
+        pilihan_pengguna = input('\n')
         if pilihan_pengguna == 'm':
             penghad_masukan_data()
             pemasuk_data()
