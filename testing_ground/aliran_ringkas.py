@@ -3,9 +3,15 @@
 from hashlib import sha256
 from collections import deque # untuk blockchain
 
-# kontainer untuk rantaian blok sesi ini
-rantaian_data = deque()
+rantaian_data = deque() # kontainer untuk rantaian blok sesi ini
+rantaian_data_cincangan = deque()
 data_data = []
+
+def pemula():
+    print('\nSelamat Datang\n')
+    mesej_awalan = tuple(input('\nMasukkan kata-kata/mesej sebelum memulakan sesi:\n '))
+    pencincang_data((mesej_awalan))
+    antara_muka()
 
 def pemasuk_data():
     pengirim, penerima = input('\nMasukkan pengirim penerima dalam format berikut: Pengirim Penerima\n').split()
@@ -20,7 +26,10 @@ def penghad_masukan_data():
 def pencincang_data(data_data):
     string_data_data = ''.join([str(elem) for elem in data_data[:3]])
     cincangan = sha256(string_data_data.encode('utf-8')).hexdigest()
-    rantaian_data.append([string_data_data, cincangan])
+    
+    # dua deque satu untuk blok maklumat, satu untuk cincangan
+    rantaian_data.append(string_data_data)
+    rantaian_data_cincangan.append(cincangan)
 
 def pengosong_kontainer(data_data):
     '''set kembali data_data kepada tiada'''
@@ -41,12 +50,12 @@ def antara_muka():
             pencincang_data(data_data)
             pengosong_kontainer(data_data)
         elif pilihan_pengguna == 'rb':
-            for elem in rantaian_data:
-                print(elem)
+            for elem, elem_cincang in zip(rantaian_data, rantaian_data_cincangan):
+                print(elem, elem_cincang)
         elif pilihan_pengguna == 'q':
             program_berjalan = False
         else:
             print('\nPilihan tidak sah!!!\n')
 
 if __name__ == "__main__":
-    antara_muka()
+    pemula()
