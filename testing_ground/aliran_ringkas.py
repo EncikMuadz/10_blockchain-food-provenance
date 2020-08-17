@@ -1,10 +1,12 @@
 ''' Implementasi program repl rantaian blok tanpa kelas'''
 
-from hashlib import sha256
+from hashlib import sha256 # untuk mencincang data
 from collections import deque # untuk blockchain
+from datetime import datetime
 
 rantaian_data = deque() # kontainer untuk rantaian blok sesi ini
-rantaian_data_cincangan = deque()
+rantaian_data_cincangan = deque() # kontainer untuk cincangan data sesi ini
+rantaian_data_cetakanmasa_blok = deque() # kontainer untuk cetakan masa sesi ini
 data_data = []
 
 def pemula():
@@ -31,6 +33,14 @@ def pencincang_data(data_data):
     rantaian_data.append(string_data_data)
     rantaian_data_cincangan.append(cincangan)
 
+    # letak cetakan masa ke dalam senarai rantaian data
+    pencetak_masa()
+
+def pencetak_masa():
+    sekarang = datetime.now()
+    cetakan_masa = datetime.timestamp(sekarang)
+    rantaian_data_cetakanmasa_blok.append(cetakan_masa)
+
 def pengosong_kontainer(data_data):
     '''set kembali data_data kepada tiada'''
     for elem in data_data:
@@ -50,8 +60,8 @@ def antara_muka():
             pencincang_data(data_data)
             pengosong_kontainer(data_data)
         elif pilihan_pengguna == 'rb':
-            for elem, elem_cincang in zip(rantaian_data, rantaian_data_cincangan):
-                print(elem, elem_cincang)
+            for elem, elem_cincang, elem_cetakan in zip(rantaian_data, rantaian_data_cincangan, rantaian_data_cetakanmasa_blok):
+                print(elem, elem_cincang, elem_cetakan)
         elif pilihan_pengguna == 'q':
             program_berjalan = False
         else:
