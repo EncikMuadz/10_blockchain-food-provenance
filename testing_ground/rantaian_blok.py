@@ -14,12 +14,11 @@ class Blok:
         string_blok = json.dumps(self.__dict__, sort_keys=True)
         return sha256(string_blok.encode('utf-8')).hexdigest()
 
-# class Rantaian:
-#     ''' mewakili kelas LinkedList'''
-#     def __init__(self):
-#         self.kepala = None
-#     def attr_kep(self):
-#         return self.kepala
+class Rantaian:
+    ''' mewakili kelas LinkedList'''
+    def __init__(self):
+        self.kepala = Blok(0, input(), time(), None)
+        self.data_data_sesi = []
 
 if __name__ == "__main__":
     ayat_awalan = 'Bacalah!!! dengan nama Tuhan mu..'
