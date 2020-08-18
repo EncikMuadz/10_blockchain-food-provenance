@@ -26,9 +26,13 @@ def penghad_masukan_data():
         raise Exception('\nMesej perlu dicincang dahulu sebelum mesej baru dihantar\n')
 
 def pencincang_data(data_data):
-    string_data_data = ''.join([str(elem) for elem in data_data[:3]])
-    cincangan = sha256(string_data_data.encode('utf-8')).hexdigest()
-    
+    try:
+        string_data_data = ''.join([str(elem) for elem in data_data])
+        cincangan = sha256(string_data_data.encode('utf-8')).hexdigest()
+    except ValueError:
+        raise Exception('\nTiada mesej-mesej untuk dicincang\n')
+
+
     # dua deque satu untuk blok maklumat, satu untuk cincangan
     rantaian_data.append(string_data_data)
     rantaian_data_cincangan.append(cincangan)
@@ -46,14 +50,18 @@ def pengosong_kontainer(data_data):
     for elem in data_data:
         data_data.remove(elem)
 
+def antara_muka_pendahuluan():
+    print('\nPilih \'m\' untuk memasukkan data\nPilih \'dd\' untuk memaparkan data-data sedia ada\nPilih \'c\' untuk cincang data-data\nPilih \'rb\' untuk memaparkan rantaian blok sedia ada\nPilih \'q\' untuk keluar\n')
+
 def antara_muka():
     program_berjalan = True
     while program_berjalan:
-        pilihan_pengguna = input('\n')
+        antara_muka_pendahuluan()
+        pilihan_pengguna = input('\nSila buat pilihan: \n')
         if pilihan_pengguna == 'm':
             penghad_masukan_data()
             pemasuk_data()
-        elif pilihan_pengguna == 'p':
+        elif pilihan_pengguna == 'dd':
             for elem in data_data:
                 print(elem)
         elif pilihan_pengguna == 'c':
