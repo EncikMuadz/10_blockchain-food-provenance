@@ -10,7 +10,7 @@
 }
 
 .h1-one {
-    text-align-last: left;
+    align-self: left;
     justify-self: left;
     font-size: calc(20px + 2vmin);
 }
