@@ -3,23 +3,26 @@
     min-height: 35vh;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
     font-size: calc(20px + 2vmin);
     color: black;
 }
 
 .h1-one {
-    align-items: left;
+    text-align-last: left;
+    justify-self: left;
     font-size: calc(20px + 2vmin);
 }
 
 .h1-two {
-    align-items: right;
+    align-self: right;
+    justify-self: right;
     font-size: calc(20px + 2vmin);
 }
 
 .logo {
+    justify-self: center;
     height: 15vmin;
     pointer-events: none;
   }
