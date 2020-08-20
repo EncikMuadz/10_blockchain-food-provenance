@@ -11,7 +11,7 @@ function App() {
         <h1 className="App-header-two"> Blok</h1>
       </header>
       <body>
-        <a className="App-body" href="https://reactjs.org" target="_blank" rel="noopener noreferrer"> Tekan untuk mula</a>
+        <a className="App-body" href="https://twistcode.com" target="_blank" rel="noopener noreferrer"> Tekan untuk mula</a>
       </body>
     </div>
   );
