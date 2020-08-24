@@ -2,6 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### To be done
 - Form to send data to the blockchain
+- Using react hooks
 
 ## Available Scripts
 
