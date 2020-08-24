@@ -1,18 +1,24 @@
 .butang-masuk {
+    height: 40px;
+    width: 200px;
     background-color: #000000;
     color: white;
     font-size: 15px;
-    border-radius: 8px;
+    border-radius: 20px;
 }
 
 .organisasi {
     margin: 8px 0;
-    padding: 12px 20px;
+    height: 20px;
+    width: 200px;
+    padding: 20px 20px;
     box-sizing: border-box;
 }
 
 .kata-laluan {
     margin: 8px 0;
-    padding: 12px 20px;
+    height: 20px;
+    width: 200px;
+    padding: 20px 20px;
     box-sizing: border-box;
 }
