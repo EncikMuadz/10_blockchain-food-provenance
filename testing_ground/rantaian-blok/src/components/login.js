@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './css/login.css'
 import User from './user'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 function Login() {
     // const [page, setPage] = useState(() => {return (<Login />)})
@@ -14,7 +15,9 @@ function Login() {
             <p>Kata Laluan
                 <input className='kata-laluan'/></p>
             <p>
-                <button className='butang-masuk' onClick={() => {return (<User />)}}>Masuklah.. apa lagi..</button>
+                <Router>
+                    <button className='butang-masuk' onClick={() => {return (<Route path='/user' render={() => <User />}></Route>)}}>Masuklah.. apa lagi..</button>
+                </Router>
             </p>
         </form>
     );
