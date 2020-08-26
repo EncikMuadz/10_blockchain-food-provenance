@@ -1,11 +1,8 @@
 import React from 'react'
 import './css/login.css'
-import User from './user'
-import { useHistory } from 'react-router-dom'
+import LoginButton from './login-button'
 
 function Login() {
-    const history = useHistory()
-    const routeToUser = () => history.push({User})
     return (
         <form>
             <h1>Log Masuk</h1>
@@ -15,7 +12,7 @@ function Login() {
             <p>Kata Laluan
                 <input className='kata-laluan'/></p>
             <p>
-                <button className='butang-masuk' onClick={routeToUser}>Masuklah.. apa lagi..</button>
+                <LoginButton />
             </p>
         </form>
     );
