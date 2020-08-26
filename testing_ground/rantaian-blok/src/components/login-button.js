@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom'
 
 function LoginButton() {
     const history = useHistory()
-    const routeToUser = () => history.push({User})
+    const routeToUser = () => history.push('/user')
     return (
         <div>
             <button className='butang-masuk' onClick={routeToUser}>Masuklah.. apa lagi..</button>
