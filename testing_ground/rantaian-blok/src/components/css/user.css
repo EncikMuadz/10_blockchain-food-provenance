@@ -1,9 +1,16 @@
 .user-form {
+    text-align: center;
     width: 150px;
     height: 150px;
     margin: 8px 0;
     padding: 12px 20px;
     box-sizing: border-box;
+}
+
+.data-input {
+    margin: 8px 0;
+    padding: 12px 20px;
+    box-sizing: border-box;    
 }
 
 .penerima-form {
