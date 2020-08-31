@@ -2,15 +2,13 @@ import React from 'react';
 import './App.css';
 import Header from './components/header'
 import Footer from './components/footer'
-import Login from './components/login'
+import Body from './components/body'
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <body>
-        <Login />
-      </body>
+      <Body />
       <Footer />
     </div>
   );
