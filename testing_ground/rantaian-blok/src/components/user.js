@@ -1,5 +1,6 @@
 import React from 'react'
 import './css/user.css'
+import UserButton from './user-button'
 
 function User() {
     return(
@@ -13,6 +14,9 @@ function User() {
             </p>
             <p>Data
                 <input className='data-input'/>
+            </p>
+            <p>
+                <UserButton />
             </p>
         </form>
     );

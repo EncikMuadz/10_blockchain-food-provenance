@@ -10,6 +10,7 @@
 .h1-form {
     margin: auto;
     padding: 12px 15px;
+    white-space: nowrap;
 }
 
 .pengirim-form {
