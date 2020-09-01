@@ -2,8 +2,25 @@
     text-align: center;
     width: 150px;
     height: 150px;
+    margin: auto;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.h1-form {
+    margin: auto;
+    padding: 12px 15px;
+}
+
+.pengirim-form {
+    margin: auto;
+    padding: 5px 20px;
+    box-sizing: border-box;
+}
+
+.penerima-form {
     margin: 8px 0;
-    padding: 12px 20px;
+    padding: 5px 20px;
     box-sizing: border-box;
 }
 
@@ -11,10 +28,4 @@
     margin: 8px 0;
     padding: 12px 20px;
     box-sizing: border-box;    
-}
-
-.penerima-form {
-    margin: 8px 0;
-    padding: 12px 20px;
-    box-sizing: border-box;
 }
