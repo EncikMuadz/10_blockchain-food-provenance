@@ -1,13 +1,14 @@
 .user-form {
-    text-align: center;
+    /* text-align: center; */
     width: 150px;
     height: 150px;
     margin: auto;
-    padding: 10px 15px;
+    padding: auto;
     box-sizing: border-box;
 }
 
 .h1-form {
+    text-align: center;
     margin: auto;
     padding: 12px 15px;
     white-space: nowrap;
