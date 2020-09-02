@@ -29,5 +29,17 @@ class Rantaian:
     def pemeriksa_blok_terkini(self):
         return self.rantaian_data[-1]
 
+    def penambah_blok(self, blok, bukti):
+        cincangan_sebelum = self.pemeriksa_blok_terkini.hash
+
+        if cincangan_sebelum != blok.cincangan_sebelum:
+            return False
+        blok.hash = bukti
+        self.rantaian_data.append(blok)
+        return True
+
+    def penambah_data_baru(self, data):
+        self.data_data_sesi.append(data)
+
 if __name__ == "__main__":
     ayat_awalan = 'Bacalah!!! dengan nama Tuhan mu..'
