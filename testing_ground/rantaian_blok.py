@@ -38,8 +38,22 @@ class Rantaian:
         self.rantaian_data.append(blok)
         return True
 
+    @staticmethod
+    def pembukti_kerja(blok):
+        cincangan_blok_dikira = blok.pencincang_blok()
+        return cincangan_blok_dikira
+
     def penambah_data_baru(self, data):
         self.data_data_sesi.append(data)
+
+    def pelombong(self):
+        if not self.data_data_sesi:
+            return False
+        pemeriksa_blok_terkini = self.pemeriksa_blok_terkini
+        blok_baharu = Blok(indeks=pemeriksa_blok_terkini.indeks, data_data=self.data_data_sesi, cetakan_masa=time(), cincangan_sebelum=pemeriksa_blok_terkini.cincangan_sebelum)
+        bukti = self.pembukti_kerja(blok_baharu)
+        self.penambah_blok(blok_baharu, bukti)
+        return True
 
 if __name__ == "__main__":
     ayat_awalan = 'Bacalah!!! dengan nama Tuhan mu..'
