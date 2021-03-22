@@ -1,7 +1,6 @@
 import streamlit as st
 
-def consortium_dashboard():
-    pass
+from utility.consortium_dashboard import consortium_dashboard
 
 def consumer_dashboard():
     pass
