@@ -1,18 +1,10 @@
 import streamlit as st
 
 from utility.consortium_dashboard import consortium_dashboard
-
-def consumer_dashboard():
-    pass
-
-def supplier_dashboard():
-    pass
-
-def transport_dashboard():
-    pass
-
-def merchant_dashboard():
-    pass
+from utility.consumer_dashboard import consumer_dashboard
+from utility.supplier_dashboard import supplier_dashboard
+from utility.transport_dashboard import transport_dashboard
+from utility.merchant_dashboard import merchant_dashboard
 
 def main():
     st.title('Food Provenance')
