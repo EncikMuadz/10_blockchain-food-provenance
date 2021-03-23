@@ -4,7 +4,7 @@ from .DBManage import DBManage
 class SupplyChainLog:
     def __init__(self):
         '''
-        Initialize the chain.
+            Initialize the chain.
         '''
         self.chain = []
         self.data_base = DBManage()
@@ -12,9 +12,9 @@ class SupplyChainLog:
 
     def genesis_block(self):
         '''
-        Generates the genesis block who initialize the chain.
+            Generates the genesis block who initialize the chain.
 
-        :return: The genesis block for the new chain.
+            :return: The genesis block for the new chain.
         '''
         data = []
         genesis_block = Block(data, "0", 0)
@@ -33,11 +33,11 @@ class SupplyChainLog:
 
     def print_blocks(self):
         '''
-        Print data of the all blocks in the chain. 
-        
-        Applicable to CLI application.
+            Print data of the all blocks in the chain. 
+            
+            Applicable to CLI application.
 
-        :return: Print the data of the user for all blocks in the chain.
+            :return: Print the data of the user for all blocks in the chain.
         '''
         for i in range(len(self.chain)):
             current_block = self.chain[i]
