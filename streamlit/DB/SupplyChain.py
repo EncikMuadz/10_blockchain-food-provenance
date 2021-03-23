@@ -1,7 +1,7 @@
-from LogchainDataBase.Block import Block
-from LogchainDataBase.Data.DBManage import DBManage
+from .Block import Block
+from .DBManage import DBManage
 
-class Logchain:
+class SupplyChainLog:
     def __init__(self):
         '''
         Initialize the chain.
