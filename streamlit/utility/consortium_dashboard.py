@@ -28,4 +28,4 @@ def consortium_dashboard():
         pass
     
     else:    
-        st.subheader('Home')    
+        st.subheader('Home')
