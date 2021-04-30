@@ -33,7 +33,7 @@ Using blockchain technology (later integrated with IoT):
   - PoW (Proof of Work) -> `WIP` -> `1st Phase`
   - PoA (Proof of Authority) -> `In Consideration` -> `2nd Phase`
     - A pre-approved set of authorities using their identity and staking their reputation to process txs
-    - higly tolerant to 51% attack
+    - highly tolerant to 51% attack
     - simplify validation process and reduce power consumption
     - suitable for supply chain use case
 
